@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café Coquette - Detail & Reservasi</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="logo">
+            <span class="heart">♡</span> Café Coquette <span class="heart">♡</span>
+        </div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="menu.html">Menu</a>
+            <a href="detail.html">Reservasi</a>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+    </header>
+
+    <!-- ===== DETAIL MENU ===== -->
+    <section class="detail-section" id="detailSection">
+        <!-- diisi JS -->
+    </section>
+
+    <!-- ===== FORM RESERVASI ===== -->
+    <section class="reservation-section">
+        <h2>✦ Reservasi / Booking ✦</h2>
+        <form id="reservationForm">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required />
+            </div>
+            <div class="form-group">
+                <label for="jumlah">Jumlah Pengunjung</label>
+                <input type="number" id="jumlah" min="1" value="1" required />
+            </div>
+            <div class="form-group">
+                <label for="menuPilihan">Pilih Menu / Paket</label>
+                <select id="menuPilihan">
+                    <option value="">-- Pilih --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tanggal">Tanggal Kunjungan</label>
+                <input type="date" id="tanggal" required />
+            </div>
+            <button type="submit" class="cta-btn">Kirim Reservasi</button>
+        </form>
+        <div id="formMessage"></div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>♡ Café Coquette &mdash; Manis dalam Setiap Tegukan ♡</p>
+        <p class="footer-small">© 2026 • Dibuat dengan cinta dan renda</p>
+    </footer>
+
+    <script src="js/menu-data.js"></script>
+    <script src="js/reservation.js"></script>
+</body>
+</html>
