@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café Coquette - Beranda</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="logo">
+            <span class="heart">♡</span> Café Coquette <span class="heart">♡</span>
+        </div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="menu.html">Menu</a>
+            <a href="detail.html">Reservasi</a>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di</h1>
+            <h2>Café Coquette</h2>
+            <p>Manis, elegan, dan penuh estetika. Tempat di mana setiap momen terasa istimewa.</p>
+            <a href="detail.html" class="cta-btn">Reservasi Sekarang</a>
+        </div>
+    </section>
+
+    <!-- ===== MENU UNGGULAN ===== -->
+    <section class="featured">
+        <h2>✦ Menu Unggulan ✦</h2>
+        <div class="featured-grid" id="featuredGrid">
+            <!-- diisi JS -->
+        </div>
+    </section>
+
+    <!-- ===== TENTANG CAFÉ ===== -->
+    <section class="about">
+        <div class="about-text">
+            <h2>♡ Tentang Kami</h2>
+            <p>
+                Café Coquette adalah surga kecil bagi pecinta estetika. Dengan interior bernuansa pink, 
+                sentuhan renda, dan ornamen bunga, kami menghadirkan pengalaman ngopi yang manis dan 
+                berkelas. Setiap sudut dirancang untuk menjadi latar foto yang sempurna.
+            </p>
+        </div>
+        <div class="about-icons">
+            <div>
+                <span>🌸</span>
+                <p>Suasana Estetik</p>
+            </div>
+            <div>
+                <span>☕</span>
+                <p>Kopi Spesial</p>
+            </div>
+            <div>
+                <span>🍰</span>
+                <p>Dessert Lezat</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KEUNGGULAN ===== -->
+    <section class="advantages">
+        <h2>✦ Keunggulan Café Coquette ✦</h2>
+        <div class="adv-grid">
+            <div>
+                <span>🎀</span>
+                <h3>Desain Instagramable</h3>
+                <p>Setiap sudut café siap jadi latar foto estetikmu.</p>
+            </div>
+            <div>
+                <span>🧁</span>
+                <h3>Menu Homemade</h3>
+                <p>Semua makanan dan minuman dibuat dengan cinta dari bahan berkualitas.</p>
+            </div>
+            <div>
+                <span>🕊️</span>
+                <h3>Suasana Tenang</h3>
+                <p>Cocok untuk me time, hangout, atau bekerja sambil menikmati kopi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>♡ Café Coquette &mdash; Manis dalam Setiap Tegukan ♡</p>
+        <p class="footer-small">© 2026 • Dibuat dengan cinta dan renda</p>
+    </footer>
+
+    <script src="js/menu-data.js"></script>
+    <script>
+        // Tampilkan 3 menu unggulan di beranda
+        window.addEventListener('DOMContentLoaded', () => {
+            const featured = document.getElementById('featuredGrid');
+            const top3 = menuItems.slice(0, 3);
+            featured.innerHTML = top3.map(item => `
+                <div class="menu-card">
+                    <img src="${item.image}" alt="${item.name}" />
+                    <h3>${item.name}</h3>
+                    <p class="price">Rp ${item.price.toLocaleString()}</p>
+                    <a href="detail.html?id=${item.id}" class="detail-link">Lihat Detail</a>
+                </div>
+            `).join('');
+        });
+    </script>
+</body>
+</html>
