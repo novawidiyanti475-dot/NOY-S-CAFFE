@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café Coquette - Menu</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="logo">
+            <span class="heart">♡</span> Café Coquette <span class="heart">♡</span>
+        </div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="menu.html">Menu</a>
+            <a href="detail.html">Reservasi</a>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+    </header>
+
+    <!-- ===== FILTER ===== -->
+    <section class="filter-section">
+        <h2>✦ Menu Kami ✦</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="Makanan">Makanan</button>
+            <button class="filter-btn" data-filter="Minuman">Minuman</button>
+            <button class="filter-btn" data-filter="Dessert">Dessert</button>
+        </div>
+    </section>
+
+    <!-- ===== GRID MENU ===== -->
+    <section class="menu-grid" id="menuGrid">
+        <!-- diisi JS -->
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>♡ Café Coquette &mdash; Manis dalam Setiap Tegukan ♡</p>
+        <p class="footer-small">© 2026 • Dibuat dengan cinta dan renda</p>
+    </footer>
+
+    <script src="js/menu-data.js"></script>
+    <script src="js/filter.js"></script>
+</body>
+</html>
